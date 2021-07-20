@@ -1,0 +1,23 @@
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 320px;
+  padding: 16px;
+}
+
+#wrapper {
+  overflow: hidden;
+}

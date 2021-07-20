@@ -1,0 +1,44 @@
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0 40px 0;
+
+  &__button {
+    background-color: rgba(17, 17, 17, 0.0);
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #8c8c8c;
+    padding: 10px 19px 8px 18px;
+
+    transition: $animation-speed;
+    flex-basis: calc(100% / 3);
+
+    &:hover {
+      background-color: #998675;
+      color: #ffffff;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__button--active {
+    background-color: #998675;
+    color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    text-align: center;
+
+    &__button {
+      margin: 0 10px 0 0;
+    }
+  }
+}

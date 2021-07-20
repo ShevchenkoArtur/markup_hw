@@ -1,0 +1,13 @@
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #8c8c8c;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: 1200px) {
+    padding: 0 200px;
+  }
+}

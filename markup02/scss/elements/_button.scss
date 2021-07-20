@@ -1,0 +1,15 @@
+.button {
+  font-family: 'Raleway', sans-serif;
+  background-color: $button-bg;
+  box-shadow: $button-box-shadow;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  font-weight: $button-font-weight;
+  text-transform: uppercase;
+  color: $button-color;
+  border: $button-border;
+  padding: $button-padding;
+  display: block;
+  margin: 0 auto;
+}

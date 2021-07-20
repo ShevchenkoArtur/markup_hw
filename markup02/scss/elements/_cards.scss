@@ -1,0 +1,130 @@
+.cards {
+  &__item {
+    margin: 0 0 30px 0;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 10px -15px;
+
+    &__item {
+      padding: 0 15px 30px 15px;
+      flex-basis: 50%;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__item {
+      flex-basis: calc(100% / 3);
+    }
+  }
+}
+
+.card {
+  &__image {
+    position: relative;
+
+    img {
+      display: block;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: $animation-speed;
+      opacity: 0;
+      visibility: hidden;
+      background-color: $card-image-hover-bg;
+    }
+  }
+
+  .icon-wrapper {
+    @extend %absolute-center;
+    @extend %flex-center;
+  }
+
+  &__icon {
+    width: $card-icon-size;
+    height: $card-icon-size;
+    margin: 0 14px 0 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: $animation-speed;
+  }
+
+  &__body {
+    background-color: $card-body-bg;
+    padding: 30px;
+    transition: $animation-speed;
+    position: relative;
+    text-overflow: ellipsis;
+
+    &:before {
+      transition: $animation-speed;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 15px 10px 15px;
+      border-color: transparent transparent #fbfaf8 transparent;
+      transform: translateY(-100%);
+    }
+  }
+
+  &__title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #c7b299;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #d1d1d1;
+    margin: 0;
+  }
+
+  &:hover {
+    .card__image {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .card__icon {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .card__body {
+      background-color: #362f2d;
+
+      &:before {
+        border-color: transparent transparent #362f2d transparent;
+      }
+    }
+
+    .card__title {
+      color: #ffffff;
+    }
+
+    .card__subtitle {
+      color: #c7b299;
+    }
+  }
+}

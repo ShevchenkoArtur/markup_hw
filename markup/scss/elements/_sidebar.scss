@@ -1,0 +1,42 @@
+.sidebar {
+  padding: 16px;
+  text-align: center;
+
+  &:last-child {
+    margin: 0 0 16px 0;
+  }
+
+  @media (min-width: 768px) {
+    float: left;
+    width: 50%;
+    margin: 16px 0 0 0;
+
+    &:last-child {
+      margin: 16px 0 16px 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.sidebar--left {
+  background-color: $sidebar-left-bg;
+
+  @media (min-width: 1200px) {
+    order: 1;
+  }
+}
+
+.sidebar--right {
+  background-color: $sidebar-right-bg;
+
+  @media (min-width: 1200px) {
+    order: 3;
+  }
+}
