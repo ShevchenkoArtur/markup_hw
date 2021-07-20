@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $header-bg;
+  padding: 16px;
+  margin-right: -10px;
+
+  &__logo {
+    flex-basis: 15%;
+  }
+
+  &__list {
+    @extend %reset-list;
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 10px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+    transition: all $animation-speed;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}

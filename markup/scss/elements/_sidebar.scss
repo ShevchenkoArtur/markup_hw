@@ -1,0 +1,14 @@
+.sidebar {
+  min-width: 210px;
+  text-align: center;
+}
+
+.sidebar_left {
+  background-color: $sidebar-left-bg;
+  order: 1;
+}
+
+.sidebar_right {
+  background-color: $sidebar-right-bg;
+  order: 3;
+}

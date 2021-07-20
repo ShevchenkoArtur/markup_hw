@@ -1,0 +1,52 @@
+.color-box {
+  @extend %flex-center;
+
+  > h3 {
+    display: none;
+  }
+
+  .holder {
+    min-width: 200px;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #000;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    margin: 32px 0 16px 0;
+
+    .item {
+      @extend %flex-center;
+    }
+
+    .item:first-child {
+      background-color: $first-element-bg;
+      flex-basis: 50%;
+      order: 1;
+    }
+
+    .item:nth-child(2) {
+      background-color: $second-element-bg;
+      order: 4;
+      flex-basis: calc(100% / 3);
+    }
+
+    .item:nth-child(3) {
+      background-color: $third-element-bg;
+      order: 3;
+      flex-basis: calc(100% / 3);
+    }
+
+    .item:nth-child(4) {
+      background-color: $fourth-element-bg;
+      order: 5;
+      flex-basis: calc(100% / 3);
+    }
+
+    .item:last-child {
+      background-color: $fifth-element-bg;
+      order: 2;
+      flex-basis: 50%;
+    }
+  }
+}

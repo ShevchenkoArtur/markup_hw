@@ -1,0 +1,7 @@
+.footer {
+  @extend %flex-center;
+  width: 100%;
+  background-color: $footer-bg;
+  padding: 16px;
+  margin-top: auto;
+}
